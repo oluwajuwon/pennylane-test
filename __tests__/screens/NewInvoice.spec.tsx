@@ -1,14 +1,9 @@
 import { useNavigation } from '@react-navigation/native'
-import {
-  QueryClient,
-  QueryClientProvider,
-  useInfiniteQuery,
-} from '@tanstack/react-query'
-import { fireEvent, render, waitFor } from '@testing-library/react-native'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { render } from '@testing-library/react-native'
 import React from 'react'
 import { useApi } from '../../src/api'
 import NewInvoice from '../../src/screens/NewInvoice'
-import Config from 'react-native-config'
 
 jest.mock('@react-navigation/native', () => ({
   useNavigation: jest.fn(),
