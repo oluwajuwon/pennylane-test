@@ -16,13 +16,25 @@ This repository contains the submission of the React Native hiring test as well 
  - This would help in sharing the invoices with client, either directly to email or via social media messaging.
  I thought about this because I realized there was no way to export the invoices at the moment.
 
+ ### Invoice Frequency and Recurrence
+ - As a user, I could have an ongoing contract with a customer with preset information, this would help save time for businesses such that they don't have to keep recreatign the same invoice everytime they need it.
+
 ## Feature Tech improvement
   ### Invoice creation
   When creating an invoice, The text fields for the invoice line item can be simplified to just search for the product Id and prefill every other field automatically
 
+  ### Error handling
+  To properly handle errors, especially errors from api requests or form feedback so the user is aware of why they're not able to continue with what they're doing
+
 ## Blockers
-  - I could not create an invoie with line attributes, I would really appreciate feedback on what i was doing wrong here
-  - Some Invoices could not be Deleted, I would also like some feedback here
+  - I could not create an invoice with line attributes, but I could create without line items. I would really appreciate feedback on what i was doing wrong here
+  - Some Invoices could not be Deleted. I would also like some feedback here on why that was happening
+  I kept getting a 422 error for both requests
+
+
+## Debugging
+  - If you stumble on this error about Flipper "Called object type 'facebook::flipper::SocketCertificateProvider' is not a function or function pointer." -> https://stackoverflow.com/q/78121217
+  - The solution is to do this -> https://stackoverflow.com/a/78122323
 
 
 

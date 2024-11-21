@@ -32,7 +32,7 @@ const Invoice = ({ route }: Props) => {
   const { invoiceId } = route.params
   const queryClient = useQueryClient()
 
-  const { data: invoice, error } = useQuery({
+  const { data: invoice } = useQuery({
     queryKey: ['invoice', invoiceId],
     queryFn: fetchInvoice,
   })

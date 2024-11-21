@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
   },
   list: {
     gap: 10,
+    paddingBottom: 30,
   },
   mainListStyle: {
     flex: 1,

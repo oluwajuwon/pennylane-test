@@ -31,6 +31,9 @@ const AddInvoiceLineItem = ({ addItem }: Props) => {
   const [error, setError] = useState('')
 
   const onSubmit = () => {
+    Boolean(error) && setError('')
+
+    // This validation is done this way for the sake of this test
     if (Object.values(state).includes('')) {
       return setError('Add all values')
     }
@@ -51,7 +54,7 @@ const AddInvoiceLineItem = ({ addItem }: Props) => {
   return (
     <View style={styles.container} testID="line-item-container">
       <View style={styles.row}>
-        {/* This should be a search for products like the customer search */}
+        {/* This would be a search for products like the customer search */}
         <TextInput
           onChangeText={(text) => setState({ ...state, product_id: text })}
           placeholder="Product ID (eg. 62)"
@@ -61,7 +64,7 @@ const AddInvoiceLineItem = ({ addItem }: Props) => {
           value={state.product_id}
           testID="product-id"
         />
-        {/* This should be prefilled from the product id search search */}
+        {/* This would be prefilled from the product id search */}
         <TextInput
           onChangeText={(text) => setState({ ...state, label: text })}
           placeholder="Label"
@@ -81,7 +84,7 @@ const AddInvoiceLineItem = ({ addItem }: Props) => {
           value={state.quantity}
           testID="line-item-quantity"
         />
-        {/* This should be prefilled from the product id search search */}
+        {/* This should be prefilled from the product id search */}
         <TextInput
           onChangeText={(text) => setState({ ...state, price: text })}
           placeholder="Price (eg. 100)"
@@ -107,6 +110,7 @@ const AddInvoiceLineItem = ({ addItem }: Props) => {
       <TouchableOpacity style={styles.button} onPress={onSubmit}>
         <Text style={styles.btnTxt}>Add Item</Text>
       </TouchableOpacity>
+      {error && <Text>{error}</Text>}
     </View>
   )
 }
