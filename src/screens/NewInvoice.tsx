@@ -85,7 +85,7 @@ const NewInvoice = () => {
       queryClient.invalidateQueries({ queryKey: ['invoices'] })
       navigation.goBack()
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 
@@ -135,7 +135,7 @@ const NewInvoice = () => {
             <View>
               <AddInvoiceLineItem addItem={onAddItem} />
               {state.invoice_lines_attributes?.map((il) => (
-                <View style={styles.linItemcontainer}>
+                <View style={styles.linItemcontainer} key={il.product_id}>
                   <View>
                     <Text style={styles.label}>{il.label}</Text>
                     <Text style={styles.quantity}>

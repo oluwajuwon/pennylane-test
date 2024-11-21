@@ -53,7 +53,6 @@ const Invoice = ({ route }: Props) => {
   }
 
   const onDeleteInvoice = async () => {
-    console.log(invoiceId)
     try {
       const { data } = await apiClient.deleteInvoice({
         id: invoiceId,
@@ -67,7 +66,6 @@ const Invoice = ({ route }: Props) => {
   }
 
   const onFinalizeInvoice = async () => {
-    console.log(invoiceId)
     try {
       const { data } = await apiClient.putInvoice(
         {

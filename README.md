@@ -1,6 +1,30 @@
-# Jean Test Mobile
+# Jean Test Mobile Submission
 
-This repository contains instructions for the React Native hiring test, as well as a bootstrapped React Native app with which to start.
+This repository contains the submission of the React Native hiring test as well as bootstrapping information to run the app
+
+## Feature improvement
+ ### Customer list/management and their invoices
+ - As a user I would want to be able to see a list of my customers and also see the invoices attached to them, as this will be easier in terms of quickly fetching information about my customers
+ - It would also be helpful to be able to just create an invoice from a customer information screen where the customer will already be preselected on the invoice screen
+ - An endpoint to get all customers would be beneficial, currently only one to search for customers exist.
+
+ ### Invoice reminders/notifications
+ - This would help to follow up with customers on their invoices especially when the due dates are getting close
+ - It will ensure timely payments by reducing the risk of forgetting or neglecting overdue invoices
+
+ ### Exporting Invoices
+ - This would help in sharing the invoices with client, either directly to email or via social media messaging.
+ I thought about this because I realized there was no way to export the invoices at the moment.
+
+## Feature Tech improvement
+  ### Invoice creation
+  When creating an invoice, The text fields for the invoice line item can be simplified to just search for the product Id and prefill every other field automatically
+
+## Blockers
+  - I could not create an invoie with line attributes, I would really appreciate feedback on what i was doing wrong here
+  - Some Invoices could not be Deleted, I would also like some feedback here
+
+
 
 ## Your mission
 
